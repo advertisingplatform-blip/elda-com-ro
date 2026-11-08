@@ -1,0 +1,31 @@
+[
+ {
+  "q": "Care sunt indicațiile general acceptate pentru RMN?",
+  "a": [
+   "Imagistica prin rezonanță magnetică este din ce în ce mai folosită pentru diagnosticarea și urmărirea unei game largi de afecțiuni. Gama largă de organe examinate și de indicații include dar nu e limitată la:"
+  ],
+  "ul": [
+   "Creier – indicatii potentiale includ accident vascular cerebral/ patologie vasculara, epilepsie lobulara temporala, infectii, inflamatii, tumori",
+   "Musculoscheletale - patologia elementelor sistemului musculoscheletal: artrite, artroze, infectii, inflamatii, traumatisme si sechelele lor",
+   "Sarcina - indicatii pentru pozitia si invazia placentara, precum si revizuirea anomaliilor fetale"
+  ]
+ },
+ {
+  "q": "Trebuie să stau nemișcat în timpul scanării RMN?",
+  "a": [
+   "Mișcarea afectează imaginile, limitând interpretarea și reducând acuratețea raportului medical deci da, este esențial să rămâneți nemișcat pe întreagă durata a examinării."
+  ]
+ },
+ {
+  "q": "Injectarea substanței de contrast constituie un risc?",
+  "a": [
+   "Administrarea substanței de contrast - gadolinium este demonstrată a fi, în general, foarte sigură. Există totuși o rată scăzută de reacții alergice, raportate ca fiind aproximativ 1 din 1000 de reacții minore și 1 din 10000 de reacții semnificative. Administrarea este contraindicată în cazul persoanelor alergice și a celor cu insuficiență renală. Persoanele cărora se intenționează a li se administra substanța de contrast - gadolinium vor fi rugate să efectueze un set de analize înainte de scanare, ureea serica și creatinină fiind de extremă importanță."
+  ]
+ },
+ {
+  "q": "RMN sau CT?",
+  "a": [
+   "Cu ajutorul Rezonanței Magnetice se pot investiga patologii de la nivel cerebral, vertebro-medular, musculo-scheletal, cardio-vascular și abdomino-pelvin. RMN este modalitatea imagistică de selecție pentru detectarea leziunilor de la nivelul articulațiilor, fiind singurul examen noninvaziv care oferă o imagine detaliată a structurilor precum meniscuri (genunchi), ligamente sau tendoane. Pentru examinarea glandelor mamare, complementar ecografiei mamare și mamografiei, se efectuează examen IRM, ce poate diferenția uneori între leziuni maligne sau benigne și poate detecta leziuni multifocale."
+  ]
+ }
+]

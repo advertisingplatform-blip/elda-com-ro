@@ -1,0 +1,127 @@
+﻿categorie,serviciu,pret_lei
+RMN Articular,RMN articulaţii sacro-iliace nativ,700
+RMN Articular,RMN articulaţii sacro-iliace cu substanţa de contrast,1000
+RMN Articular,RMN articulaţii coxo-femurale (bazin osos) nativ,700
+RMN Articular,RMN articulaţii coxo-femurale (bazin osos) cu substanţa de contrast,1000
+RMN Articular,RMN articulaţii genunchi nativ,700
+RMN Articular,RMN articulaţii genunchi cu substanţa de contrast,1000
+RMN Articular,RMN articulatii genunchi bilateral nativ,1250
+RMN Articular,RMN articulatii genunchi bilateral cu substanta de contrast,1550
+RMN Articular,RMN umar nativ,700
+RMN Articular,RMN umar cu substanţa de contrast,1000
+RMN Articular,RMN cot nativ,700
+RMN Articular,RMN cot cu substanta de contrast,1000
+RMN Articular,RMN glezna nativ,700
+RMN Articular,RMN glezna cu substanţa de contrast,1000
+RMN Articular,RMN talpa (antepicior) nativ,700
+RMN Articular,RMN talpa (antepicior) cu substanţa de contrast,1000
+RMN Articular,RMN talpa (antepicior) bilateral nativ,1250
+RMN Articular,RMN talpa (antepicior) bilateral cu substanţa de contrast,1550
+RMN Cerebro-Medular,RMN cerebral +1 segment coloana vertebrala nativ,1300
+RMN Cerebro-Medular,RMN cerebral + 1 segment coloana vertebrala substanta de contrast,1600
+RMN Cerebro-Medular,RMN cerebral + 2 segmente coloana vertebrala nativ,1800
+RMN Cerebro-Medular,RMN cerebral + 2 segmente coloana vertebrala substanta de contrast,2100
+RMN Cerebro-Medular,RMN cerebral + 3 segmente coloana vertebrala nativ,2500
+RMN Cerebro-Medular,RMN cerebral + 3 segmente coloana vertebrala substanta de contrast,2800
+RMN Coloană,RMN coloana vertebrală 1 segment cu substanţa de contrast,1000
+RMN Coloană,RMN coloana vertebrală 1 segment nativ,700
+RMN Coloană,RMN coloana vertebrală 2 segmente cu substanţa de contrast,1550
+RMN Coloană,RMN coloana vertebrală 2 segmente nativ,1250
+RMN Coloană,RMN coloana vertebrală 3 segmente cu substanţa de contrast,1900
+RMN Coloană,RMN coloana vertebrală 3 segmente nativ,1600
+RMN Cerebral,RMN cranio-cerebral nativ,700
+RMN Cerebral,RMN cranio-cerebral cu substanţa de contrast,1000
+RMN Cerebral,RMN cerebral + hipofiza nativ,900
+RMN Cerebral,RMN cerebral + hipofiza cu substanţa de contrast,1200
+RMN Cerebral,RMN cerebral + sinusuri nativ,900
+RMN Cerebral,RMN cerebral + sinusuri cu substanţa de contrast,1200
+RMN Cerebral,RMN cerebral + orbite nativ,900
+RMN Cerebral,RMN cerebral + orbite cu substanţa de contrast,1200
+RMN Cerebral,RMN cerebral + ureche interna nativ,900
+RMN Cerebral,RMN cerebral + ureche interna cu substanta de contrast,1200
+RMN Cerebral,RMN cerebral + angio RMN arterial sau venos nativ,900
+RMN Cerebral,RMN cerebral + angio RMN arterial sau venos cu substanta de contrast,1200
+RMN Cerebral,RMN cerebral + angio RMN arterial si venos nativ,1100
+RMN Cerebral,RMN cerebral + angio RMN arterial si venos cu substanţa de contrast,1400
+RMN Abdominal,RMN abdominal nativ,750
+RMN Abdominal,RMN abdominal nativ şi cu substanţa de contrast,1050
+RMN Abdominal,RMN abdomino-pelvin nativ,1500
+RMN Abdominal,RMN abdomino-pelvin cu substanţa de contrast,1800
+RMN Abdominal,RMN abdominal nativ si colangio,1100
+RMN Abdominal,RMN abdominal si colangio cu substanţa de contrast,1400
+RMN Abdominal,RMN abdomino-pelvin nativ si colangio,1800
+RMN Abdominal,RMN abdomino-pelvin si colangio cu substanţa de contrast,2100
+RMN Abdominal,Uro RMN (abdomino-pelvin si aparat urinar) nativ,1800
+RMN Abdominal,Uro RMN (abdomino-pelvin si aparat urinar) cu substanţa de contrast,2100
+RMN Abdominal,RMN ficat cu substanţa de contrast Primovist,1750
+RMN Pelvin,RMN pelvis nativ (abdomen inferior),750
+RMN Pelvin,RMN pelvis nativ (abdomen inferior) cu substanţa de contrast,1050
+RMN Pelvin,RMN abdomino-pelvin nativ,1500
+RMN Pelvin,RMN abdomino-pelvin cu substanţa de contrast,1800
+RMN Pelvin,RMN abdomino-pelvin nativ si colangio,1800
+RMN Pelvin,RMN abdomino-pelvin si colangio cu substanţa de contrast,2100
+RMN Pelvin,Uro RMN (abdomino-pelvin si aparat urinar) nativ,1800
+RMN Pelvin,Uro RMN (abdomino-pelvin si aparat urinar) cu substanţa de contrast,2100
+RMN Extremități,RMN extremități (braț/antebraț/coapsă/gambă) nativ,750
+RMN Extremități,RMN extremități (braț/antebraț/coapsă/gambă) cu substanţă de contrast,1050
+RMN Extremități,RMN mană/pumn nativ,750
+RMN Extremități,RMN mană/pumn cu substanţă de contrast,1050
+RMN Regiune Cervicală,RMN regiune cervicala (gat) nativ,800
+RMN Regiune Cervicală,RMN regiune cervicala (gat) cu substanţa de contrast,1100
+RMN Regiune Cervicală,RMN cerebral + regiune cervicala nativ,1400
+RMN Regiune Cervicală,RMN cerebral + regiune cervicala cu substanţa de contrast,1700
+RMN Toracal,RMN perete toracic/torace nativ,750
+RMN Toracal,RMN perete toracic/torace cu substanţă de contrast,1050
+RMN Mamar,RMN sâni nativ,900
+RMN Mamar,RMN sâni cu substanţa de contrast,1200
+RMN Mamar,Completare substanţa de contrast,300
+RMN Mamar,Primovist,1000
+CT Imagistică Uro-Genitală (Pelvis),CT ABDOMEN + PELVIS+ URO CU SUBSTANTA DE CONTRAST,1300
+CT Radiologie Cap și Gât,CT CRANIO-CEREBRAL nativ,430
+CT Radiologie Cap și Gât,CT CRANIO-CEREBRAL nativ +substanta de contrast,740
+CT Radiologie Cap și Gât,CT gat (regiune cervicala) nativ,460
+CT Radiologie Cap și Gât,CT gat (regiune cervicala) cu substanta de contrast,780
+CT Radiologie Cap și Gât,CT cerebral + gat (regiune cervicala) nativ,700
+CT Radiologie Cap și Gât,CT cerebral + gat (regiune cervicala) cu substanta de contrast,900
+CT Radiologie Cap și Gât,CT GAT (REGIUNE CERVICALA) + REGIUNE TORACICA + ABDOMEN+PELVIS NATIV,1500
+CT Radiologie Cap și Gât,CT GAT (REGIUNE CERVICALA) + REGIUNE TORACICA + ABDOMEN+PELVIS CU SUBSTANTA DE CONTRAST,1850
+CT Radiologie Cap și Gât,CT SINUSURI nativ,460
+CT Radiologie Cap și Gât,CT SINUSURI nativ +substanta de contrast,780
+CT Radiologie Cap și Gât,CT URECHE / MASTOIDA nativ,460
+CT Radiologie Cap și Gât,CT URECHE / MASTOIDA nativ cu substanta de contrast,780
+CT Corp,CT cerebral + abdomen superior nativ,700
+CT Corp,CT cerebral + abdomen superior cu substanta de contrast,900
+CT Corp,CT cerebral + abdomen + pelvis nativ,1000
+CT Corp,CT cerebral + abdomen + pelvis cu substanta de contrast,1300
+CT Corp,CT CRANIO-CEREBRAL+REGIUNE TORACICA+ABDOMEN+PELVIS NATIV,1200
+CT Corp,CT CRANIO-CEREBRAL+REGIUNE TORACICA+ABDOMEN+PELVIS CU SUBSTANTA DE CONTRAST,1500
+CT Corp,CT CRANIO-CEREBRAL+GAT+REGIUNE TORACICA+ABDOMEN+PELVIS NATIV,1800
+CT Corp,CT CRANIO-CEREBRAL+GAT+REGIUNE TORACICA+ABDOMEN+PELVIS CU SUBSTANTA DE CONTRAST,2250
+CT Radiologie Gastrointestinală,CT abdomen + pelvis nativ,700
+CT Radiologie Gastrointestinală,CT abdomen + pelvis cu substanţa de contrast,1000
+CT Radiologie Gastrointestinală,CT abdomen superior nativ,480
+CT Radiologie Gastrointestinală,CT abdomen superior cu substanţa de contrast,740
+CT Radiologie Gastrointestinală,CT abdomen inferior (pelvis) nativ,480
+CT Radiologie Gastrointestinală,CT abdomen inferior (pelvis) cu substanţa de contrast,740
+CT Radiologie Musculo-Scheletală,CT oasele bazinului (articulaţii sacroiliace si coxo-femurale) nativ,580
+CT Radiologie Musculo-Scheletală,CT oasele bazinului (articulaţii sacroiliace si coxo-femurale) cu substanţa de contrast,780
+CT Radiologie Musculo-Scheletală,CT extremități- segment (MANA / PUMN / ANTEBRAT / BRAT / UMAR) nativ,400
+CT Radiologie Musculo-Scheletală,CT extremități- segment (MANA / PUMN / ANTEBRAT / BRAT / UMAR) cu substanţa de contrast,740
+CT Radiologie Musculo-Scheletală,CT extremități- segment (COAPSA / GAMBA / PICIOR / GLEZNA / GENUNCHI) nativ,390
+CT Radiologie Musculo-Scheletală,CT extremități- segment (COAPSA / GAMBA / PICIOR / GLEZNA / GENUNCHI) cu substanţa de contrast,750
+CT Radiologie Musculo-Scheletală,CT COLOANA VERTEBRALA / segment* nativ,430
+CT Radiologie Musculo-Scheletală,CT COLOANA VERTEBRALA / segment* cu substanţa de contrast,720
+Angio CT,Angio CT aorta toracica cu substanţa de contrast,850
+Angio CT,Angio CT aorta abdominala cu substanţa de contrast,850
+Angio CT,Angio CT aorta totala (toracica si abdominala) si axele iliofemurale cu substanţa de contrast,1200
+Angio CT,Angio CT artere renale cu substanţa de contrast,850
+Angio CT,Angio CT artere carotide cu substanţa de contrast,850
+Angio CT,Angio CT cerebral (poligon Willis) cu substanţa de contrast,850
+Angio CT,Angio CT axe iliofemurale cu substanţa de contrast,850
+Angio CT,Angio CT trunchiuri supraaortice cu substanţa de contrast,1200
+Angio CT,Angio CT membre inferioare cu substanţa de contrast,1200
+Angio CT,Angio CT picior diabetic cu substanţa de contrast,850
+Angio CT,Angio CT cerebral cu substanţa de contrast,850
+CT Radiologie Toracică,CT regiune toracică nativ,490
+CT Radiologie Toracică,CT regiune toracică cu substanţa de contrast,780
+Servicii suplimentare,CD suplimentar RMN/CT,60
