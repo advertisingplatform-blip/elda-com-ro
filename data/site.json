@@ -5,7 +5,7 @@
   "facebook": "https://www.facebook.com/elda.com.ro/",
   "chestionar": "https://docs.google.com/forms/d/e/1FAIpQLSdQ9q_gc_EhxlLNwO_oucNGPM7Xd4c4wmicsRR5wMruEcGJXA/viewform",
   "formular_endpoint": "",
-  "preturi_nota": "Prețurile sunt exprimate în lei. Finanțare 0% disponibilă – întrebați personalul clinicii. CT se efectuează la Complex Malcoci.",
+  "preturi_nota": "Prețurile sunt exprimate în lei. Gratuitate cu bilet de trimitere. CT se efectuează la Complex Malcoci.",
   "program": {"zile": "Luni – Vineri", "deschis": "07:30", "inchis": "19:30", "weekend": "Închis"},
   "clinici": [
     {
