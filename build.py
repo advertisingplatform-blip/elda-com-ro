@@ -207,6 +207,7 @@ def layout(path, title, desc, body, crumbs=(), ld=(), og="/assets/img/og-default
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="stylesheet" href="/assets/css/style.css?v={YEAR}">
 <script>document.documentElement.className="js"</script>
+{GA4_SCRIPT}
 <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))}</script>
 </head>
 <body>
