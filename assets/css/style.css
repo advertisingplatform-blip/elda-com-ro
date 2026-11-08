@@ -83,6 +83,7 @@ details.faq[open] summary::after{content:"–"}
 .dl dt{font-weight:700;margin-top:.7rem}.dl dd{margin:0;color:var(--muted)}
 .partners{display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:center}.partners img{height:64px;width:auto;filter:grayscale(.2)}
 .cta-band{background:var(--brand);color:#fff;padding:2.2rem 0;text-align:center}.cta-band h2{color:#fff}.cta-band p{opacity:.92}.cta-band .btns{justify-content:center}
+.map {width: 100%;margin-top: 1rem;overflow: hidden;border-radius: 12px;}.map iframe{display: block;width: 100%;height: 340px;border: 0;}
 /* footer */
 .ftr{background:#1b1213;color:#e9dede;padding:2.2rem 0 1.5rem;font-size:.95rem}
 .ftr a{color:#f1d5d5}.ftr h3{color:#fff;font-size:1rem}.ftr img{height:46px;width:auto;margin-bottom:1rem}
