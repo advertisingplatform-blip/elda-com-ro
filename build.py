@@ -391,7 +391,7 @@ def build():
     (OUT / "manifest.webmanifest").write_text(json.dumps({"name": site["nume"], "short_name": "ELDA", "start_url": local_url("/"), "display": "browser", "theme_color": "#800000", "background_color": "#ffffff", "icons": [{"src": local_url("/icon-192.png"), "sizes": "192x192", "type": "image/png"}, {"src": local_url("/icon-512.png"), "sizes": "512x512", "type": "image/png"}]}, ensure_ascii=False), "utf-8")
     L = [f"# {site['nume']}", "", "> Clinici de imagistică medicală în București: RMN (rezonanță magnetică nucleară) și CT (tomografie computerizată). Activ din 1992. Investigațiile cu bilet de trimitere sunt gratuite (decontate de CAS).", "", "## Fapte cheie",
          f"- Program: {site['program']['zile']}, {site['program']['deschis']}–{site['program']['inchis']}; weekend închis."]
-    for c in CL: L.append(f"- {c['nume']} ({c['servicii']}): {c['adresa']}, {c["sector"]}, {c['cod']}; tel {c['telefon']}; Clinica {c['whatsapp']}; {c['email']}; {URL}/clinic/{c['slug']}")
+    for c in CL: L.append(f"- {c['nume']} ({c['servicii']}): {c['adresa']}, {c["sector"]}, {c['cod']}; tel {c['telefon']}; WhatsApp {c['whatsapp']}; {c['email']}; {URL}/clinic/{c['slug']}")
     L += [f"- Prețuri: de la {lei(min(pmin(s['price_category']) for s in SERV))} (RMN) și de la {lei(min(pmin(k) for k in CATS if k.startswith(('CT', 'Angio'))))} (CT); listă completă la {URL}/preturi (actualizată {PRICE_DATE})", "", "## Pagini"]
     for p, t, ok, _ in sorted(PAGES):
         if ok and p != "sitemap": L.append(f"- [{t}]({URL}{'/' if p == 'index' else '/' + p})")
