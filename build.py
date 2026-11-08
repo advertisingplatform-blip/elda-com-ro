@@ -20,6 +20,24 @@ URL = (
     else PRODUCTION_URL
 )
 
+# ---------- Google Analytics 4 ----------
+# Tracking activ doar pe site-ul de producție, nu pe preview-ul GitHub Pages.
+GA4_ID = "G-FH4BLBDLTE"
+
+GA4_SCRIPT = (
+    f"""
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', '{GA4_ID}');
+</script>
+"""
+    if not GITHUB_PAGES
+    else ""
+)
+
 def local_url(path="/"):
     """URL intern pentru site-ul root sau pentru GitHub Pages project site."""
     if not path.startswith("/"):
