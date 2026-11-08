@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generator de site static ELDA. Rulare: python3 build.py  ->  folderul dist/
 Nu are dependențe externe (doar Python 3.9+). Datele se editează în data/ și content/."""
-import csv, json, html, re, shutil, subprocess, datetime, unicodedata
+import csv, json, html, re, shutil, subprocess, datetime, unicodedata, sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -11,7 +11,57 @@ site = json.loads((ROOT / "data/site.json").read_text("utf-8"))
 SERV = json.loads((ROOT / "data/servicii_rmn.json").read_text("utf-8"))
 FAQ_RMN = json.loads((ROOT / "data/faq_rmn.json").read_text("utf-8"))
 M = json.loads((ROOT / "assets/img/manifest.json").read_text("utf-8"))
-URL = site["url"]
+PRODUCTION_URL = site["url"].rstrip("/")
+GITHUB_PAGES = "--github-pages" in sys.argv
+BASE = "/elda-com-ro" if GITHUB_PAGES else ""
+URL = (
+    "https://advertisingplatform-blip.github.io/elda-com-ro"
+    if GITHUB_PAGES
+    else PRODUCTION_URL
+)
+
+def local_url(path="/"):
+    """URL intern pentru site-ul root sau pentru GitHub Pages project site."""
+    if not path.startswith("/"):
+        path = "/" + path
+    return BASE + path
+
+def localize_html_urls(doc):
+    """Adaugă prefixul /elda-com-ro pentru URL-urile interne în preview."""
+    if not GITHUB_PAGES:
+        return doc
+
+    doc = re.sub(
+        r'((?:href|src|action|poster|data-src)=")/(?!/)',
+        rf'\1{BASE}/',
+        doc,
+    )
+
+    doc = re.sub(
+        r"((?:href|src|action|poster|data-src)=')/(?!/)",
+        rf"\1{BASE}/",
+        doc,
+    )
+
+    def fix_srcset(match):
+        value = match.group(1)
+        value = re.sub(
+            r'(?<![A-Za-z0-9])/(assets/)',
+            rf'{BASE}/\1',
+            value,
+        )
+        return f'srcset="{value}"'
+
+    doc = re.sub(r'srcset="([^"]*)"', fix_srcset, doc)
+
+    doc = re.sub(
+        r'(url=)/(?!/)',
+        rf'\1{BASE}/',
+        doc,
+    )
+
+    return doc
+
 CL = site["clinici"]
 TODAY = datetime.date.today().isoformat()
 YEAR = datetime.date.today().year
@@ -160,6 +210,7 @@ def layout(path, title, desc, body, crumbs=(), ld=(), og="/assets/img/og-default
 <div class="mbar"><a href="{tel(c5["telefon"])}">📞 {c5["telefon"]}<small>{c5["nume"]} · {c5["scurt"]}</small></a><a href="{tel(c6["telefon"])}">📞 {c6["telefon"]}<small>{c6["nume"]} · {c6["scurt"]}</small></a></div>
 <script src="/assets/js/main.js" defer></script>
 </body></html>'''
+    doc = localize_html_urls(doc)
     fp = OUT / ("index.html" if path == "index" else path + ".html")
     fp.parent.mkdir(parents=True, exist_ok=True)
     fp.write_text(doc, "utf-8")
@@ -179,11 +230,14 @@ def hero(h1, lead, eyebrow="", bullets=(), image=None, btns=True, price=None):
 
 # ================= PAGINI =================
 def build():
+    """Construiește site-ul pentru producție sau pentru GitHub Pages preview."""
     if OUT.exists(): shutil.rmtree(OUT)
     OUT.mkdir()
     for d in ("assets",): shutil.copytree(ROOT / d, OUT / d)
     for f in (ROOT / "static").iterdir(): shutil.copy(f, OUT / f.name)
-    (OUT / "CNAME").write_text("elda.com.ro\n"); (OUT / ".nojekyll").write_text("")
+    if not GITHUB_PAGES:
+        (OUT / "CNAME").write_text("elda.com.ro\n", encoding="utf-8")
+    (OUT / ".nojekyll").write_text("", encoding="utf-8")
     S = {s["slug"]: s for s in SERV}
 
     # ---- Acasă
@@ -247,7 +301,7 @@ def build():
 
     # ---- redirect vechi (pagină care nu era în sitemap)
     OUT.joinpath("rmn").mkdir(exist_ok=True)
-    (OUT / "rmn/rezonanta-magnetica-nucleara.html").write_text(f'<!doctype html><html lang="ro"><head><meta charset="utf-8"><title>RMN – ELDA Imagistică Medicală</title><link rel="canonical" href="{URL}/rmn"><meta http-equiv="refresh" content="0;url=/rmn"><meta name="robots" content="noindex,follow"></head><body><p><a href="/rmn">Pagina RMN</a></p></body></html>', "utf-8")
+    (OUT / "rmn/rezonanta-magnetica-nucleara.html").write_text(f'<!doctype html><html lang="ro"><head><meta charset="utf-8"><title>RMN – ELDA Imagistică Medicală</title><link rel="canonical" href="{URL}/rmn"><meta http-equiv="refresh" content="0;url={local_url("/rmn")}"><meta name="robots" content="noindex,follow"></head><body><p><a href="{local_url("/rmn")}">Pagina RMN</a></p></body></html>', "utf-8")
 
     # ---- CT
     ctc = "".join(f'<a class="card" href="/preturi#{slugify(k)}"><h3>{E(k)}</h3><span class="price-tag">De la {lei(pmin(k))}</span></a>' for k in CATS if k.startswith(("CT", "Angio", "Servicii")) and k.startswith(("CT", "Angio")))
@@ -315,7 +369,7 @@ def build():
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>', "utf-8")
     bots = "\n".join(f"User-agent: {b}\nAllow: /\n" for b in ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "PerplexityBot", "Google-Extended", "Applebot-Extended", "CCBot"])
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\n{bots}\nSitemap: {URL}/sitemap.xml\n", "utf-8")
-    (OUT / "manifest.webmanifest").write_text(json.dumps({"name": site["nume"], "short_name": "ELDA", "start_url": "/", "display": "browser", "theme_color": "#800000", "background_color": "#ffffff", "icons": [{"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"}]}, ensure_ascii=False), "utf-8")
+    (OUT / "manifest.webmanifest").write_text(json.dumps({"name": site["nume"], "short_name": "ELDA", "start_url": local_url("/"), "display": "browser", "theme_color": "#800000", "background_color": "#ffffff", "icons": [{"src": local_url("/icon-192.png"), "sizes": "192x192", "type": "image/png"}, {"src": local_url("/icon-512.png"), "sizes": "512x512", "type": "image/png"}]}, ensure_ascii=False), "utf-8")
     L = [f"# {site['nume']}", "", "> Clinici de imagistică medicală în București: RMN (rezonanță magnetică nucleară) și CT (tomografie computerizată). Activ din 1992. Investigațiile cu bilet de trimitere sunt gratuite (decontate de CAS).", "", "## Fapte cheie",
          f"- Program: {site['program']['zile']}, {site['program']['deschis']}–{site['program']['inchis']}; weekend închis."]
     for c in CL: L.append(f"- {c['nume']} ({c['servicii']}): {c['adresa']}, {c["sector"]}, {c['cod']}; tel {c['telefon']}; WhatsApp {c['whatsapp']}; {c['email']}; {URL}/clinic/{c['slug']}")
@@ -329,6 +383,8 @@ def check():
     bad = 0
     for f in OUT.rglob("*.html"):
         for h in re.findall(r'href="(/[^"#?]*)', f.read_text("utf-8")):
+            if GITHUB_PAGES and h.startswith(BASE + "/"):
+                h = h[len(BASE):] or "/"
             t = h.rstrip("/") or "/"
             cand = [OUT / (t[1:] + ".html"), OUT / t[1:], OUT / "index.html"] if t != "/" else [OUT / "index.html"]
             if not any(c.is_file() for c in cand[:2] + (cand[2:] if t == "/" else [])): print("LINK RUPT:", f.relative_to(OUT), "->", h); bad += 1
