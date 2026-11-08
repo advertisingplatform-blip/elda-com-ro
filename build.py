@@ -120,7 +120,7 @@ def img(k, alt, sizes="100vw", cls="", eager=False):
 def btn_call(c, cls="", label=None):
     return f'<a class="btn {cls}" href="{tel(c["telefon"])}">📞 {label or "Sună: " + c["telefon"]}</a>'
 def btn_wa(c, cls=""):
-    return f'<a class="btn wa {cls}" href="{wa(c["whatsapp"])}" rel="noopener">WhatsApp {c["scurt"]}</a>'
+    return f'<a class="btn wa {cls}" href="{wa(c["whatsapp"])}" rel="noopener">WhatsApp {c["nume"]}</a>'
 def btn_prog(cls="ghost"):
     return f'<a class="btn {cls}" href="/contact">Solicită o programare</a>'
 
